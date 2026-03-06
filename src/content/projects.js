@@ -13,7 +13,7 @@ const projects = [
     image: phytoplankton,
     links: {
       github: 'https://github.com/adityaram-2003/phytoplankton-classification',
-      preview: 'https://phytoplankton-classification.vercel.app',
+      preview: 'https://adityaramk.com/projects/phytoplankton-classification',
     },
   },
   {
