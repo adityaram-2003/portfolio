@@ -158,6 +158,13 @@
     .gmail-error {
       font-size: 0.8em;
       color: #e74c3c;
+      a { color: #e74c3c; text-decoration: underline; }
+    }
+
+    .gmail-success {
+      font-size: 0.8em;
+      color: #27ae60;
+      font-weight: 500;
     }
   }
 }

@@ -41,16 +41,6 @@ const papers = [
     tags: ['IoT', 'Machine Learning', 'Predictive Analytics', 'Agriculture'],
     status: 'published',
   },
-  {
-    title: 'Safe Driving Enabled using IoT',
-    year: '2023',
-    publisher: 'E3S Web of Conferences',
-    doi: 'https://doi.org/10.1051/e3sconf/202339101140',
-    description:
-      'Designed an IoT-based system to enhance road safety by monitoring driver behavior and vehicle conditions in real-time, triggering alerts and interventions to prevent accidents.',
-    tags: ['IoT', 'Road Safety', 'Embedded Systems', 'Real-Time Monitoring'],
-    status: 'published',
-  },
 ];
 
 const PaperCard = ({ paper, index }) => {

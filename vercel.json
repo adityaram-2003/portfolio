@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/projects/phytoplankton-classification",
+      "destination": "https://phytoplankton-classification.vercel.app"
+    },
+    {
       "source": "/projects/phytoplankton-classification/:path*",
       "destination": "https://phytoplankton-classification.vercel.app/:path*"
     }
