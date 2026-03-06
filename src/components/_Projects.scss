@@ -23,13 +23,19 @@
 
     .project-image {
       width: 50%;
-      position: absolute !important; // overide gatsby-image style
+      height: 100%;
+      position: absolute !important;
       top: 0;
       left: 0;
+      object-fit: contain;
+      padding: 40px;
+      box-sizing: border-box;
+      background-color: #f8f8fb;
 
       @include tablet {
         display: none;
       }
+    }
     }
 
     .project-background {
