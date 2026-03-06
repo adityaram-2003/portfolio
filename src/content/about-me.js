@@ -15,8 +15,7 @@ const statements = [
   },
   {
     input: 'Adityaram.education',
-    return:
-      '"M.S. Data Science – Columbia University (Dec 2026) | B.Tech CSE – GRIET, GPA 8.9/10"',
+    return: '"M.S. Data Science – Columbia University (Dec 2026)"',
   },
   {
     input: 'Adityaram.languages',
@@ -29,10 +28,6 @@ const statements = [
   {
     input: 'Adityaram.interests',
     return: '["machine learning", "computer vision", "NLP", "research", "data science"]',
-  },
-  {
-    input: 'Adityaram.certifications',
-    return: '["Harvard CS50", "Stanford SQL0001 Databases", "IBM: ML with Python"]',
   },
 ];
 
