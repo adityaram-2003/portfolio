@@ -22,7 +22,7 @@
     }
 
     .project-image {
-      width: 80%;
+      width: 50%;
       position: absolute !important; // overide gatsby-image style
       top: 0;
       left: 0;
@@ -37,7 +37,7 @@
       top: -1px;
       right: -1px;
       height: 110%;
-      width: 83%;
+      width: 60%;
       background: url('../images/project-background-white.svg');
       background-size: cover;
 
