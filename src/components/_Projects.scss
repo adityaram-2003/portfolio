@@ -22,9 +22,13 @@
     }
 
     .project-image {
-      opacity: 0;
       width: 80%;
-      display: none;
+      position: absolute !important; // overide gatsby-image style
+      top: 0;
+      left: 0;
+
+      @include tablet {
+        display: none;
       }
     }
 
@@ -102,7 +106,8 @@
             &:hover {
               background: #fff;
             }
-    }
+          }
+        }
       }
 
       p {
@@ -129,7 +134,7 @@
           font-size: 0.85em;
           color: $grey;
         }
+      }
     }
   }
-}
 }
