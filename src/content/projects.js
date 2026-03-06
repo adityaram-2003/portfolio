@@ -1,6 +1,6 @@
-import phytoplankton from 'images/ldeo.png';
-import loanapproval from 'images/tcs.png';
-import bonefracture from 'images/griet.png';
+import phytoplankton from 'images/travlr.jpg';
+import loanapproval from 'images/stockmarketchart.jpg';
+import bonefracture from 'images/calculator.jpg';
 
 const projects = [
   {
