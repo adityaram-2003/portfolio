@@ -2,8 +2,6 @@ import phytoplankton from 'images/travlr.jpg';
 import loanapproval from 'images/stockmarketchart.jpg';
 import bonefracture from 'images/calculator.jpg';
 
-// image can be any size. just make sure it is close to a 1:1 ratio - a square.
-
 const projects = [
   {
     title: 'Automated Phytoplankton Classification (CAPCS)',
