@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/projects/phytoplankton-classification/:path*",
+      "destination": "https://phytoplankton-classification.vercel.app/:path*"
+    }
+  ]
+}
