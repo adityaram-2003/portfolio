@@ -1,0 +1,167 @@
+@use '../scss/breakpoints' as *;
+@use '../scss/colors' as *;
+
+.research-container {
+  margin: 0 auto;
+  font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .paper-card {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05),
+      0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 60px 120px rgba(50, 50, 93, 0.08),
+        0 18px 40px rgba(50, 50, 93, 0.12), 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .paper-index {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 80px;
+      background: linear-gradient(135deg, $purple, $fadedBlue);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 2em;
+      font-weight: 700;
+      letter-spacing: -1px;
+
+      @include mobile {
+        min-width: unset;
+        padding: 16px;
+        font-size: 1.4em;
+        justify-content: flex-start;
+      }
+    }
+
+    .paper-content {
+      padding: 32px 40px;
+      flex: 1;
+
+      @include mobile {
+        padding: 24px;
+      }
+
+      .paper-meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+
+        .paper-year {
+          font-size: 0.85em;
+          font-weight: 600;
+          color: $purple;
+          background: rgba($purple, 0.08);
+          padding: 3px 10px;
+          border-radius: 20px;
+        }
+
+        .paper-publisher {
+          font-size: 0.85em;
+          color: $grey;
+          font-weight: 500;
+        }
+
+        .paper-status {
+          font-size: 0.8em;
+          font-weight: 600;
+          margin-left: auto;
+
+          @include mobile {
+            margin-left: 0;
+          }
+
+          &.status-published {
+            color: #27ae60;
+          }
+
+          &.status-review {
+            color: #e67e22;
+          }
+        }
+      }
+
+      .paper-title {
+        font-size: 1.15em;
+        font-weight: 600;
+        color: $grey;
+        margin: 0 0 16px 0;
+        line-height: 1.5;
+      }
+
+      .paper-description {
+        font-size: 0.92em;
+        color: lighten($grey, 15%);
+        line-height: 1.7;
+        margin-bottom: 16px;
+        border-left: 3px solid $highlighterGreen;
+        padding-left: 14px;
+      }
+
+      .paper-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+
+        .paper-tag {
+          font-size: 0.78em;
+          border: 2px solid $highlighterGreen;
+          border-radius: 4px;
+          padding: 4px 10px;
+          color: $grey;
+        }
+      }
+
+      .paper-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .paper-btn-text {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+          font-size: 0.85em;
+          color: $fadedPurple;
+          font-weight: 600;
+          padding: 0;
+          transition: color 0.15s;
+
+          &:hover {
+            color: $purple;
+          }
+        }
+
+        .paper-btn-link {
+          font-size: 0.88em;
+          font-weight: 700;
+          color: $purple;
+          text-decoration: none;
+          letter-spacing: 0.02em;
+          transition: color 0.15s;
+
+          &:hover {
+            color: $fadedBlue;
+          }
+        }
+      }
+    }
+  }
+}

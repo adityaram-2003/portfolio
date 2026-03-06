@@ -1,0 +1,205 @@
+@use '../scss/breakpoints' as *;
+@use '../scss/colors' as *;
+
+.contact-section {
+  font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+  margin-top: 60px;
+  padding-bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  @include mobile {
+    padding-bottom: 80px;
+    margin-top: 40px;
+  }
+}
+
+// ─── Gmail Compose Window ────────────────────────────────────────────────────
+.gmail-compose {
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(50, 50, 93, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  .gmail-header {
+    background: $grey;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .gmail-title {
+      color: #fff;
+      font-size: 0.9em;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .gmail-header-actions {
+      display: flex;
+      gap: 12px;
+
+      .gmail-icon-btn {
+        color: rgba(255, 255, 255, 0.75);
+        cursor: pointer;
+        font-size: 0.9em;
+        user-select: none;
+        transition: color 0.15s;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .gmail-field {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 16px;
+    gap: 12px;
+
+    label {
+      font-size: 0.8em;
+      color: lighten($grey, 20%);
+      min-width: 54px;
+      font-weight: 500;
+    }
+
+    input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+      font-size: 0.9em;
+      color: $grey;
+      background: transparent;
+
+      &::placeholder {
+        color: lighten($grey, 30%);
+      }
+    }
+
+    &.gmail-field-to {
+      .gmail-to-chip {
+        display: inline-flex;
+        align-items: center;
+        background: rgba($purple, 0.1);
+        color: $fadedPurple;
+        font-size: 0.82em;
+        font-weight: 600;
+        border-radius: 20px;
+        padding: 3px 10px;
+      }
+    }
+  }
+
+  .gmail-body {
+    padding: 12px 16px;
+
+    textarea {
+      width: 100%;
+      border: none;
+      outline: none;
+      resize: none;
+      font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+      font-size: 0.92em;
+      color: $grey;
+      line-height: 1.6;
+      background: transparent;
+      box-sizing: border-box;
+
+      &::placeholder {
+        color: lighten($grey, 30%);
+      }
+    }
+  }
+
+  .gmail-footer {
+    background: #fafafa;
+    border-top: 1px solid #f0f0f0;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .gmail-send-btn {
+      background: $purple;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 22px;
+      font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+      font-size: 0.88em;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s, transform 0.15s;
+
+      &:hover:not(:disabled) {
+        background: $fadedBlue;
+        transform: translateY(-1px);
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: default;
+      }
+    }
+
+    .gmail-error {
+      font-size: 0.8em;
+      color: #e74c3c;
+    }
+  }
+}
+
+// ─── Contact Pills Row ────────────────────────────────────────────────────────
+.contact-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+
+  .contact-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.88em;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    box-shadow: 0 4px 10px rgba(50, 50, 93, 0.1), 0 1px 4px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    color: $fadedPurple;
+    border: 2px solid transparent;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(50, 50, 93, 0.12), 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &.whatsapp {
+      &:hover { color: #25d366; border-color: #25d366; }
+    }
+    &.phone {
+      &:hover { color: $purple; border-color: $purple; }
+    }
+    &.linkedin {
+      &:hover { color: #0077b5; border-color: #0077b5; }
+    }
+    &.github {
+      &:hover { color: #333; border-color: #333; }
+    }
+  }
+}
