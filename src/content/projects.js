@@ -2,6 +2,8 @@ import phytoplankton from 'images/travlr.jpg';
 import loanapproval from 'images/stockmarketchart.jpg';
 import bonefracture from 'images/calculator.jpg';
 
+// image can be any size. just make sure it is close to a 1:1 ratio - a square.
+
 const projects = [
   {
     title: 'Automated Phytoplankton Classification (CAPCS)',
@@ -21,7 +23,7 @@ const projects = [
     skills: ['Python', 'TensorFlow', 'Keras', 'Computer Vision', 'Medical Imaging', 'scikit-learn'],
     image: bonefracture,
     links: {
-      github: 'https://github.com/adityaram-2003',
+      github: 'https://github.com/adityaram-2003/Bone-Fracture-Detection',
       preview: null,
     },
   },

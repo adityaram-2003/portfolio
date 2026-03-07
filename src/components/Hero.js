@@ -11,8 +11,8 @@ const Hero = () => {
     <div className="hero-container">
       <Typewriter className="hero-title" text="Adityaram Komaraneni" />
       <div className="hero-description">
-        I am a Data Science Research Scholar at Columbia University.<br />My
-        passion is building intelligent systems that solve real-world problems.<br />Check out my{' '}
+        I am a Data Science Research Scholar at Columbia University.<br />I
+        build machine learning systems that turn messy data into practical business solutions.<br />Check out my{' '}
         <a href="#projects" onClick={handleScroll}>
           projects
         </a>{' '}
