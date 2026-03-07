@@ -6,6 +6,7 @@ import About from 'components/About';
 import Projects from 'components/Projects';
 import Research from 'components/Research';
 import ContactLinks from 'components/ContactLinks';
+import CustomCursor from 'components/CustomCursor';
 
 import projects from 'content/projects';
 import statements from 'content/about-me';
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <Layout>
       <React.Fragment>
+        <CustomCursor />
         <Hero />
         <About statements={statements} />
         <h2 id="projects" className="section-title">

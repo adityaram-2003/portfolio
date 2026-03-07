@@ -1,0 +1,36 @@
+@use '../scss/colors' as *;
+
+* {
+  cursor: none !important;
+}
+
+.cursor-ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid $purple;
+  background: transparent;
+  pointer-events: none;
+  z-index: 99999;
+  transition: width 0.18s ease, height 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+  will-change: transform;
+
+  &.cursor-grow {
+    width: 40px;
+    height: 40px;
+    background: rgba($purple, 0.08);
+  }
+}
+
+// On mobile/touch devices, don't show the custom cursor
+@media (hover: none) {
+  * {
+    cursor: auto !important;
+  }
+  .cursor-ball {
+    display: none;
+  }
+}
