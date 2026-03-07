@@ -68,7 +68,7 @@
 
     label {
       font-size: 0.8em;
-      color: lighten($grey, 20%);
+      color: color.adjust($grey, $lightness: 20%);
       min-width: 54px;
       font-weight: 500;
     }
