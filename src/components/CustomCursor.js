@@ -2,11 +2,15 @@ import React, { useEffect, useRef } from 'react';
 
 const CustomCursor = () => {
   const ballRef = useRef(null);
-  const posRef = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-  const mouseRef = useRef({ x: posRef.current.x, y: posRef.current.y });
+  const posRef = useRef({ x: 0, y: 0 });
+  const mouseRef = useRef({ x: 0, y: 0 });
   const rafRef = useRef(null);
 
   useEffect(() => {
+    // Only runs in browser — safe from SSR
+    posRef.current = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    mouseRef.current = { x: posRef.current.x, y: posRef.current.y };
+
     const ball = ballRef.current;
     if (!ball) return;
 
@@ -37,7 +41,6 @@ const CustomCursor = () => {
       });
     };
 
-    // slight delay to let DOM settle
     const timer = setTimeout(addListeners, 500);
 
     return () => {
