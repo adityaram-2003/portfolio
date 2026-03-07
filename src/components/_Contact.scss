@@ -1,5 +1,6 @@
 @use '../scss/breakpoints' as *;
 @use '../scss/colors' as *;
+@use 'sass:color';
 
 .contact-section {
   font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
@@ -82,7 +83,7 @@
       background: transparent;
 
       &::placeholder {
-        color: lighten($grey, 30%);
+        color: color.adjust($grey, $lightness: 30%);
       }
     }
 
@@ -116,7 +117,7 @@
       box-sizing: border-box;
 
       &::placeholder {
-        color: lighten($grey, 30%);
+        color: color.adjust($grey, $lightness: 30%);
       }
     }
   }
