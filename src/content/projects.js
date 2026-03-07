@@ -21,7 +21,7 @@ const projects = [
     skills: ['Python', 'TensorFlow', 'Keras', 'Computer Vision', 'Medical Imaging', 'scikit-learn'],
     image: bonefracture,
     links: {
-      github: 'https://github.com/adityaram-2003/Bone-Fracture-Detection',
+      github: 'https://github.com/adityaram-2003',
       preview: null,
     },
   },
